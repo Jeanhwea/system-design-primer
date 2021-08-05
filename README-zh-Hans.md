@@ -1,16 +1,4 @@
-> * 原文地址：[github.com/donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer)
-> * 译文出自：[掘金翻译计划](https://github.com/xitu/gold-miner)
-> * 译者：[XatMassacrE](https://github.com/XatMassacrE)、[L9m](https://github.com/L9m)、[Airmacho](https://github.com/Airmacho)、[xiaoyusilen](https://github.com/xiaoyusilen)、[jifaxu](https://github.com/jifaxu)、[根号三](https://github.com/sqrthree)
-> * 这个 [链接](https://github.com/xitu/system-design-primer/compare/master...donnemartin:master) 用来查看本翻译与英文版是否有差别（如果你没有看到 README.md 发生变化，那就意味着这份翻译文档是最新的）。
-
-*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [العَرَبِيَّة‎](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [বাংলা](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Português do Brasil](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Deutsch](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [ελληνικά](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [עברית](https://github.com/donnemartin/system-design-primer/issues/272) ∙ [Italiano](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [한국어](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [فارسی](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polski](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [русский язык](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Español](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [ภาษาไทย](https://github.com/donnemartin/system-design-primer/issues/187) ∙ [Türkçe](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [tiếng Việt](https://github.com/donnemartin/system-design-primer/issues/127) ∙ [Français](https://github.com/donnemartin/system-design-primer/issues/250) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
-
 # 系统设计入门
-
-<p align="center">
-  <img src="images/jj3A5N8.png">
-  <br/>
-</p>
 
 ## 目的
 
@@ -102,7 +90,7 @@
 </p>
 
 * [系统设计主题：从这里开始](#系统设计主题从这里开始)
-    * [第一步：回顾可扩展性的视频讲座](#第一步回顾可扩展性scalability的视频讲座)
+    * [第一步：回顾可扩展性的视频讲座](#第一步回顾可扩展性 scalability 的视频讲座)
     * [第二步：回顾可扩展性的文章](#第二步回顾可扩展性文章)
     * [接下来的步骤](#接下来的步骤)
 * [性能与拓展性](#性能与可扩展性)
@@ -119,22 +107,22 @@
     * [故障切换](#故障切换)
     * [复制](#复制)
 * [域名系统](#域名系统)
-* [CDN](#内容分发网络cdn)
-    * [CDN 推送](#cdn-推送push)
-    * [CDN 拉取](#cdn-拉取pull)
+* [CDN](#内容分发网络 cdn)
+    * [CDN 推送](#cdn-推送 push)
+    * [CDN 拉取](#cdn-拉取 pull)
 * [负载均衡器](#负载均衡器)
-    * [工作到备用切换（Active-passive）](#工作到备用切换active-passive)
-    * [双工作切换（Active-active）](#双工作切换active-active)
+    * [工作到备用切换（Active-passive）](#工作到备用切换 active-passive)
+    * [双工作切换（Active-active）](#双工作切换 active-active)
     * [四层负载均衡](#四层负载均衡)
     * [七层负载均衡](#七层负载均衡器)
     * [水平扩展](#水平扩展)
-* [反向代理（web 服务器）](#反向代理web-服务器)
+* [反向代理（web 服务器）](#反向代理 web-服务器)
     * [负载均衡与反向代理](#负载均衡器与反向代理)
 * [应用层](#应用层)
     * [微服务](#微服务)
     * [服务发现](#服务发现)
 * [数据库](#数据库)
-    * [关系型数据库管理系统（RDBMS）](#关系型数据库管理系统rdbms)
+    * [关系型数据库管理系统（RDBMS）](#关系型数据库管理系统 rdbms)
         * [Master-slave 复制集](#主从复制)
         * [Master-master 复制集](#主主复制)
         * [联合](#联合)
@@ -165,10 +153,10 @@
     * [任务队列](#任务队列)
     * [背压机制](#背压)
 * [通讯](#通讯)
-    * [传输控制协议（TCP）](#传输控制协议tcp)
-    * [用户数据报协议（UDP）](#用户数据报协议udp)
-    * [远程控制调用协议（RPC）](#远程过程调用协议rpc)
-    * [表述性状态转移（REST）](#表述性状态转移rest)
+    * [传输控制协议（TCP）](#传输控制协议 tcp)
+    * [用户数据报协议（UDP）](#用户数据报协议 udp)
+    * [远程控制调用协议（RPC）](#远程过程调用协议 rpc)
+    * [表述性状态转移（REST）](#表述性状态转移 rest)
 * [安全](#安全)
 * [附录](#附录)
     * [2 的次方表](#2-的次方表)
@@ -208,15 +196,15 @@
 * **中期** - 以系统设计主题的**广度**和**初级深度**为目标。通过解决**很多**面试题来练习。
 * **长期** - 以系统设计主题的**广度**和**高级深度**为目标。通过解决**大部分**面试题来练习。
 
-|                                          | 短期   | 中期   | 长期   |
-| ---------------------------------------- | ---- | ---- | ---- |
-| 阅读 [系统设计主题](#系统设计主题的索引) 以获得一个关于系统如何工作的宽泛的认识 | :+1: | :+1: | :+1: |
-| 阅读一些你要面试的[公司工程博客](#公司工程博客)的文章            | :+1: | :+1: | :+1: |
-| 阅读 [真实架构](#真实架构)                   | :+1: | :+1: | :+1: |
-| 复习 [如何处理一个系统设计面试题](#如何处理一个系统设计面试题)       | :+1: | :+1: | :+1: |
-| 完成 [系统设计的面试题和解答](#系统设计的面试题和解答)             | 一些   | 很多   | 大部分  |
-| 完成 [面向对象设计的面试题和解答](#面向对象设计的面试问题及解答)        | 一些   | 很多   | 大部分  |
-| 复习 [其它的系统设计面试题](#其它的系统设计面试题)          | 一些   | 很多   | 大部分  |
+|                                                                                 | 短期 | 中期 | 长期   |
+|---------------------------------------------------------------------------------|------|------|--------|
+| 阅读 [系统设计主题](#系统设计主题的索引) 以获得一个关于系统如何工作的宽泛的认识 | :+1: | :+1: | :+1:   |
+| 阅读一些你要面试的[公司工程博客](#公司工程博客)的文章                           | :+1: | :+1: | :+1:   |
+| 阅读 [真实架构](#真实架构)                                                      | :+1: | :+1: | :+1:   |
+| 复习 [如何处理一个系统设计面试题](#如何处理一个系统设计面试题)                  | :+1: | :+1: | :+1:   |
+| 完成 [系统设计的面试题和解答](#系统设计的面试题和解答)                          | 一些 | 很多 | 大部分 |
+| 完成 [面向对象设计的面试题和解答](#面向对象设计的面试问题及解答)                | 一些 | 很多 | 大部分 |
+| 复习 [其它的系统设计面试题](#其它的系统设计面试题)                              | 一些 | 很多 | 大部分 |
 
 ## 如何处理一个系统设计的面试题
 
@@ -291,17 +279,17 @@
 
 > 与内容有关的解答在 `solutions/` 文件夹中。
 
-| 问题                                       |                                          |
-| ---------------------------------------- | ---------------------------------------- |
-| 设计 Pastebin.com (或者 Bit.ly)              | [解答](solutions/system_design/pastebin/README-zh-Hans.md) |
-| 设计 Twitter 时间线和搜索 (或者 Facebook feed 和搜索) | [解答](solutions/system_design/twitter/README.md) |
-| 设计一个网页爬虫                                 | [解答](solutions/system_design/web_crawler/README.md) |
-| 设计 Mint.com                              | [解答](solutions/system_design/mint/README.md) |
-| 为一个社交网络设计数据结构                            | [解答](solutions/system_design/social_graph/README.md) |
-| 为搜索引擎设计一个 key-value 储存                   | [解答](solutions/system_design/query_cache/README.md) |
-| 通过分类特性设计 Amazon 的销售排名                    | [解答](solutions/system_design/sales_rank/README.md) |
-| 在 AWS 上设计一个百万用户级别的系统                     | [解答](solutions/system_design/scaling_aws/README.md) |
-| 添加一个系统设计问题                               | [贡献](#贡献)                                |
+| 问题                                                  |                                                            |
+|-------------------------------------------------------|------------------------------------------------------------|
+| 设计 Pastebin.com (或者 Bit.ly)                       | [解答](solutions/system_design/pastebin/README-zh-Hans.md) |
+| 设计 Twitter 时间线和搜索 (或者 Facebook feed 和搜索) | [解答](solutions/system_design/twitter/README.md)          |
+| 设计一个网页爬虫                                      | [解答](solutions/system_design/web_crawler/README.md)      |
+| 设计 Mint.com                                         | [解答](solutions/system_design/mint/README.md)             |
+| 为一个社交网络设计数据结构                            | [解答](solutions/system_design/social_graph/README.md)     |
+| 为搜索引擎设计一个 key-value 储存                     | [解答](solutions/system_design/query_cache/README.md)      |
+| 通过分类特性设计 Amazon 的销售排名                    | [解答](solutions/system_design/sales_rank/README.md)       |
+| 在 AWS 上设计一个百万用户级别的系统                   | [解答](solutions/system_design/scaling_aws/README.md)      |
+| 添加一个系统设计问题                                  | [贡献](#贡献)                                              |
 
 ### 设计 Pastebin.com (或者 Bit.ly)
 
@@ -359,16 +347,16 @@
 
 >**注：此节还在完善中**
 
-| 问题           |                                          |
-| ------------ | ---------------------------------------- |
-| 设计 hash map  | [解决方案](solutions/object_oriented_design/hash_table/hash_map.ipynb) |
-| 设计 LRU 缓存    | [解决方案](solutions/object_oriented_design/lru_cache/lru_cache.ipynb) |
-| 设计一个呼叫中心     | [解决方案](solutions/object_oriented_design/call_center/call_center.ipynb) |
-| 设计一副牌        | [解决方案](solutions/object_oriented_design/deck_of_cards/deck_of_cards.ipynb) |
-| 设计一个停车场      | [解决方案](solutions/object_oriented_design/parking_lot/parking_lot.ipynb) |
-| 设计一个聊天服务     | [解决方案](solutions/object_oriented_design/online_chat/online_chat.ipynb) |
-| 设计一个环形数组     | [待解决](#贡献)                     |
-| 添加一个面向对象设计问题 | [待解决](#贡献)                     |
+| 问题                     |                                                                                |
+|--------------------------|--------------------------------------------------------------------------------|
+| 设计 hash map            | [解决方案](solutions/object_oriented_design/hash_table/hash_map.ipynb)         |
+| 设计 LRU 缓存            | [解决方案](solutions/object_oriented_design/lru_cache/lru_cache.ipynb)         |
+| 设计一个呼叫中心         | [解决方案](solutions/object_oriented_design/call_center/call_center.ipynb)     |
+| 设计一副牌               | [解决方案](solutions/object_oriented_design/deck_of_cards/deck_of_cards.ipynb) |
+| 设计一个停车场           | [解决方案](solutions/object_oriented_design/parking_lot/parking_lot.ipynb)     |
+| 设计一个聊天服务         | [解决方案](solutions/object_oriented_design/online_chat/online_chat.ipynb)     |
+| 设计一个环形数组         | [待解决](#贡献)                                                                |
+| 添加一个面向对象设计问题 | [待解决](#贡献)                                                                |
 
 ## 系统设计主题：从这里开始
 
@@ -631,7 +619,7 @@ CDN 拉取是当第一个用户请求该资源时，从服务器上拉取资源�
     * 不需要再每台服务器上安装 [X.509 证书](https://en.wikipedia.org/wiki/X.509)。
 * **Session 留存** ─ 如果 Web 应用程序不追踪会话，发出 cookie 并将特定客户端的请求路由到同一实例。
 
-通常会设置采用[工作─备用](#工作到备用切换active-passive) 或 [双工作](#双工作切换active-active) 模式的多个负载均衡器，以免发生故障。
+通常会设置采用[工作─备用](#工作到备用切换 active-passive) 或 [双工作](#双工作切换 active-active) 模式的多个负载均衡器，以免发生故障。
 
 负载均衡器能基于多种方式来路由流量:
 
@@ -745,7 +733,7 @@ CDN 拉取是当第一个用户请求该资源时，从服务器上拉取资源�
 
 ### 服务发现
 
-像 [Consul](https://www.consul.io/docs/index.html)，[Etcd](https://coreos.com/etcd/docs/latest) 和 [Zookeeper](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper) 这样的系统可以通过追踪注册名、地址、端口等信息来帮助服务互相发现对方。[Health checks](https://www.consul.io/intro/getting-started/checks.html) 可以帮助确认服务的完整性和是否经常使用一个 [HTTP](#超文本传输协议http) 路径。Consul 和 Etcd 都有一个内建的 [key-value 存储](#键-值存储) 用来存储配置信息和其他的共享信息。
+像 [Consul](https://www.consul.io/docs/index.html)，[Etcd](https://coreos.com/etcd/docs/latest) 和 [Zookeeper](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper) 这样的系统可以通过追踪注册名、地址、端口等信息来帮助服务互相发现对方。[Health checks](https://www.consul.io/intro/getting-started/checks.html) 可以帮助确认服务的完整性和是否经常使用一个 [HTTP](#超文本传输协议 http) 路径。Consul 和 Etcd 都有一个内建的 [key-value 存储](#键-值存储) 用来存储配置信息和其他的共享信息。
 
 ### 不利之处：应用层
 
@@ -782,7 +770,7 @@ CDN 拉取是当第一个用户请求该资源时，从服务器上拉取资源�
 - **隔离性** - 并发执行事务的结果与顺序执行事务的结果相同。
 - **持久性** - 事务提交后，对系统的影响是永久的。
 
-关系型数据库扩展包括许多技术：**主从复制**、**主主复制**、**联合**、**分片**、**非规范化**和 **SQL调优**。
+关系型数据库扩展包括许多技术：**主从复制**、**主主复制**、**联合**、**分片**、**非规范化**和 **SQL 调优**。
 
 <p align="center">
   <img src="images/C9ioGtn.png">
@@ -1033,7 +1021,7 @@ Google 发布了第一个列型存储数据库 [Bigtable](http://www.read.seas.h
 
 在图数据库中，一个节点对应一条记录，一个弧对应两个节点之间的关系。图数据库被优化用于表示外键繁多的复杂关系或多对多关系。
 
-图数据库为存储复杂关系的数据模型，如社交网络，提供了很高的性能。它们相对较新，尚未广泛应用，查找开发工具或者资源相对较难。许多图只能通过 [REST API](#表述性状态转移rest) 访问。
+图数据库为存储复杂关系的数据模型，如社交网络，提供了很高的性能。它们相对较新，尚未广泛应用，查找开发工具或者资源相对较难。许多图只能通过 [REST API](#表述性状态转移 rest) 访问。
 
 ##### 相关资源和延伸阅读：图
 - [图数据库](https://en.wikipedia.org/wiki/Graph_database)
@@ -1103,15 +1091,15 @@ Google 发布了第一个列型存储数据库 [Bigtable](http://www.read.seas.h
 
 ### 客户端缓存
 
-缓存可以位于客户端（操作系统或者浏览器），[服务端](#反向代理web-服务器)或者不同的缓存层。
+缓存可以位于客户端（操作系统或者浏览器），[服务端](#反向代理 web-服务器)或者不同的缓存层。
 
 ### CDN 缓存
 
-[CDN](#内容分发网络cdn) 也被视为一种缓存。
+[CDN](#内容分发网络 cdn) 也被视为一种缓存。
 
 ### Web 服务器缓存
 
-[反向代理](#反向代理web-服务器)和缓存（比如 [Varnish](https://www.varnish-cache.org/)）可以直接提供静态和动态内容。Web 服务器同样也可以缓存请求，返回相应结果而不必连接应用服务器。
+[反向代理](#反向代理 web-服务器)和缓存（比如 [Varnish](https://www.varnish-cache.org/)）可以直接提供静态和动态内容。Web 服务器同样也可以缓存请求，返回相应结果而不必连接应用服务器。
 
 ### 数据库缓存
 
@@ -1332,7 +1320,7 @@ def set_user(user_id, values):
 <p align="center">
   <img src="images/5KeocQs.jpg">
   <br/>
-  <strong><a href=http://www.escotal.com/osilayer.html>资料来源：OSI 7层模型</a></strong>
+  <strong><a href=http://www.escotal.com/osilayer.html>资料来源：OSI 7 层模型</a></strong>
 </p>
 
 ### 超文本传输协议（HTTP）
@@ -1341,13 +1329,13 @@ HTTP 是一种在客户端和服务器之间编码和传输数据的方法。它
 
 一个基本的 HTTP 请求由一个动词（方法）和一个资源（端点）组成。 以下是常见的 HTTP 动词：
 
-| 动词     | 描述             | *幂等  | 安全性  | 可缓存            |
-| ------ | -------------- | ---- | ---- | -------------- |
-| GET    | 读取资源           | Yes  | Yes  | Yes            |
-| POST   | 创建资源或触发处理数据的进程 | No   | No   | Yes，如果回应包含刷新信息 |
-| PUT    | 创建或替换资源        | Yes  | No   | No             |
-| PATCH  | 部分更新资源         | No   | No   | Yes，如果回应包含刷新信息 |
-| DELETE | 删除资源           | Yes  | No   | No             |
+| 动词   | 描述                         | *幂等 | 安全性 | 可缓存                    |
+|--------|------------------------------|-------|--------|---------------------------|
+| GET    | 读取资源                     | Yes   | Yes    | Yes                       |
+| POST   | 创建资源或触发处理数据的进程 | No    | No     | Yes，如果回应包含刷新信息 |
+| PUT    | 创建或替换资源               | Yes   | No     | No                        |
+| PATCH  | 部分更新资源                 | No    | No     | Yes，如果回应包含刷新信息 |
+| DELETE | 删除资源                     | Yes   | No     | No                        |
 
 
 
@@ -1360,7 +1348,7 @@ HTTP 是依赖于较低级协议（如 **TCP** 和 **UDP**）的应用层协议�
 * [README](https://www.quora.com/What-is-the-difference-between-HTTP-protocol-and-TCP-protocol)    +
 * [HTTP 是什么？](https://www.nginx.com/resources/glossary/http/)
 * [HTTP 和 TCP 的区别](https://www.quora.com/What-is-the-difference-between-HTTP-protocol-and-TCP-protocol)
-* [PUT 和 PATCH的区别](https://laracasts.com/discuss/channels/general-discussion/whats-the-differences-between-put-and-patch?page=1)
+* [PUT 和 PATCH 的区别](https://laracasts.com/discuss/channels/general-discussion/whats-the-differences-between-put-and-patch?page=1)
 
 ### 传输控制协议（TCP）
 
@@ -1473,7 +1461,7 @@ RESTful 接口有四条规则：
 * **标志资源（HTTP 里的 URI）** ── 无论什么操作都使用同一个 URI。
 * **表示的改变（HTTP 的动作）** ── 使用动作, headers 和 body。
 * **可自我描述的错误信息（HTTP 中的 status code）** ── 使用状态码，不要重新造轮子。
-* **[HATEOAS](http://restcookbook.com/Basics/hateoas/)（HTTP 中的HTML 接口）** ── 你的 web 服务器应该能够通过浏览器访问。
+* **[HATEOAS](http://restcookbook.com/Basics/hateoas/)（HTTP 中的 HTML 接口）** ── 你的 web 服务器应该能够通过浏览器访问。
 
 REST 请求的例子：
 
@@ -1495,15 +1483,15 @@ REST 关注于暴露数据。它减少了客户端／服务端的耦合程度，
 
 ### RPC 与 REST 比较
 
-| 操作          | RPC                                      | REST                                     |
-| ----------- | ---------------------------------------- | ---------------------------------------- |
-| 注册          | **POST** /signup                         | **POST** /persons                        |
-| 注销          | **POST** /resign<br/>{<br/>"personid": "1234"<br/>} | **DELETE** /persons/1234                 |
-| 读取用户信息      | **GET** /readPerson?personid=1234        | **GET** /persons/1234                    |
-| 读取用户物品列表    | **GET** /readUsersItemsList?personid=1234 | **GET** /persons/1234/items              |
+| 操作                   | RPC                                                                                       | REST                                                         |
+|------------------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| 注册                   | **POST** /signup                                                                          | **POST** /persons                                            |
+| 注销                   | **POST** /resign<br/>{<br/>"personid": "1234"<br/>}                                       | **DELETE** /persons/1234                                     |
+| 读取用户信息           | **GET** /readPerson?personid=1234                                                         | **GET** /persons/1234                                        |
+| 读取用户物品列表       | **GET** /readUsersItemsList?personid=1234                                                 | **GET** /persons/1234/items                                  |
 | 向用户物品列表添加一项 | **POST** /addItemToUsersItemsList<br/>{<br/>"personid": "1234";<br/>"itemid": "456"<br/>} | **POST** /persons/1234/items<br/>{<br/>"itemid": "456"<br/>} |
-| 更新一个物品      | **POST** /modifyItem<br/>{<br/>"itemid": "456";<br/>"key": "value"<br/>} | **PUT** /items/456<br/>{<br/>"key": "value"<br/>} |
-| 删除一个物品      | **POST** /removeItem<br/>{<br/>"itemid": "456"<br/>} | **DELETE** /items/456                    |
+| 更新一个物品           | **POST** /modifyItem<br/>{<br/>"itemid": "456";<br/>"key": "value"<br/>}                  | **PUT** /items/456<br/>{<br/>"key": "value"<br/>}            |
+| 删除一个物品           | **POST** /removeItem<br/>{<br/>"itemid": "456"<br/>}                                      | **DELETE** /items/456                                        |
 
 <p align="center">
   <strong><a href="https://apihandyman.io/do-you-really-know-why-you-prefer-rest-over-rpc">资料来源：你真的知道你为什么更喜欢 REST 而不是 RPC 吗</a></strong>
@@ -1610,30 +1598,30 @@ Notes
 
 > 常见的系统设计面试问题，给出了如何解决的方案链接
 
-| 问题                      | 引用                                       |
-| ----------------------- | ---------------------------------------- |
-| 设计类似于 Dropbox 的文件同步服务   | [youtube.com](https://www.youtube.com/watch?v=PE4gwstWhmc) |
-| 设计类似于 Google 的搜索引擎      | [queue.acm.org](http://queue.acm.org/detail.cfm?id=988407)<br/>[stackexchange.com](http://programmers.stackexchange.com/questions/38324/interview-question-how-would-you-implement-google-search)<br/>[ardendertat.com](http://www.ardendertat.com/2012/01/11/implementing-search-engines/)<br/>[stanford.edu](http://infolab.stanford.edu/~backrub/google.html) |
-| 设计类似于 Google 的可扩展网络爬虫   | [quora.com](https://www.quora.com/How-can-I-build-a-web-crawler-from-scratch) |
-| 设计 Google 文档            | [code.google.com](https://code.google.com/p/google-mobwrite/)<br/>[neil.fraser.name](https://neil.fraser.name/writing/sync/) |
-| 设计类似 Redis 的键值存储        | [slideshare.net](http://www.slideshare.net/dvirsky/introduction-to-redis) |
-| 设计类似 Memcached 的缓存系统    | [slideshare.net](http://www.slideshare.net/oemebamo/introduction-to-memcached) |
-| 设计类似亚马逊的推荐系统            | [hulu.com](http://tech.hulu.com/blog/2011/09/19/recommendation-system.html)<br/>[ijcai13.org](http://ijcai13.org/files/tutorial_slides/td3.pdf) |
-| 设计类似 Bitly 的短链接系统       | [n00tc0d3r.blogspot.com](http://n00tc0d3r.blogspot.com/) |
-| 设计类似 WhatsApp 的聊天应用     | [highscalability.com](http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html) |
-| 设计类似 Instagram 的图片分享系统  | [highscalability.com](http://highscalability.com/flickr-architecture)<br/>[highscalability.com](http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html) |
-| 设计 Facebook 的新闻推荐方法     | [quora.com](http://www.quora.com/What-are-best-practices-for-building-something-like-a-News-Feed)<br/>[quora.com](http://www.quora.com/Activity-Streams/What-are-the-scaling-issues-to-keep-in-mind-while-developing-a-social-network-feed)<br/>[slideshare.net](http://www.slideshare.net/danmckinley/etsy-activity-feeds-architecture) |
-| 设计 Facebook 的时间线系统      | [facebook.com](https://www.facebook.com/note.php?note_id=10150468255628920)<br/>[highscalability.com](http://highscalability.com/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html) |
-| 设计 Facebook 的聊天系统       | [erlang-factory.com](http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf)<br/>[facebook.com](https://www.facebook.com/note.php?note_id=14218138919&id=9445547199&index=0) |
-| 设计类似 Facebook 的图表搜索系统   | [facebook.com](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-out-the-infrastructure-for-graph-search/10151347573598920)<br/>[facebook.com](https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920)<br/>[facebook.com](https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920) |
-| 设计类似 CloudFlare 的内容传递网络 | [cmu.edu](http://repository.cmu.edu/cgi/viewcontent.cgi?article=2112&context=compsci) |
-| 设计类似 Twitter 的热门话题系统    | [michael-noll.com](http://www.michael-noll.com/blog/2013/01/18/implementing-real-time-trending-topics-in-storm/)<br/>[snikolov .wordpress.com](http://snikolov.wordpress.com/2012/11/14/early-detection-of-twitter-trends/) |
-| 设计一个随机 ID 生成系统          | [blog.twitter.com](https://blog.twitter.com/2010/announcing-snowflake)<br/>[github.com](https://github.com/twitter/snowflake/) |
-| 返回一定时间段内次数前 k 高的请求      | [ucsb.edu](https://icmi.cs.ucsb.edu/research/tech_reports/reports/2005-23.pdf)<br/>[wpi.edu](http://davis.wpi.edu/xmdv/docs/EDBT11-diyang.pdf) |
-| 设计一个数据源于多个数据中心的服务系统     | [highscalability.com](http://highscalability.com/blog/2009/8/24/how-google-serves-data-from-multiple-datacenters.html) |
-| 设计一个多人网络卡牌游戏            | [indieflashblog.com](https://web.archive.org/web/20180929181117/http://www.indieflashblog.com/how-to-create-an-asynchronous-multiplayer-game.html)<br/>[buildnewgames.com](http://buildnewgames.com/real-time-multiplayer/) |
-| 设计一个垃圾回收系统              | [stuffwithstuff.com](http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/)<br/>[washington.edu](http://courses.cs.washington.edu/courses/csep521/07wi/prj/rick.pdf) |
-| 添加更多的系统设计问题             | [贡献](#贡献)              |
+| 问题                                   | 引用                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 设计类似于 Dropbox 的文件同步服务      | [youtube.com](https://www.youtube.com/watch?v=PE4gwstWhmc)                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 设计类似于 Google 的搜索引擎           | [queue.acm.org](http://queue.acm.org/detail.cfm?id=988407)<br/>[stackexchange.com](http://programmers.stackexchange.com/questions/38324/interview-question-how-would-you-implement-google-search)<br/>[ardendertat.com](http://www.ardendertat.com/2012/01/11/implementing-search-engines/)<br/>[stanford.edu](http://infolab.stanford.edu/~backrub/google.html)                                                                                            |
+| 设计类似于 Google 的可扩展网络爬虫     | [quora.com](https://www.quora.com/How-can-I-build-a-web-crawler-from-scratch)                                                                                                                                                                                                                                                                                                                                                                               |
+| 设计 Google 文档                       | [code.google.com](https://code.google.com/p/google-mobwrite/)<br/>[neil.fraser.name](https://neil.fraser.name/writing/sync/)                                                                                                                                                                                                                                                                                                                                |
+| 设计类似 Redis 的键值存储              | [slideshare.net](http://www.slideshare.net/dvirsky/introduction-to-redis)                                                                                                                                                                                                                                                                                                                                                                                   |
+| 设计类似 Memcached 的缓存系统          | [slideshare.net](http://www.slideshare.net/oemebamo/introduction-to-memcached)                                                                                                                                                                                                                                                                                                                                                                              |
+| 设计类似亚马逊的推荐系统               | [hulu.com](http://tech.hulu.com/blog/2011/09/19/recommendation-system.html)<br/>[ijcai13.org](http://ijcai13.org/files/tutorial_slides/td3.pdf)                                                                                                                                                                                                                                                                                                             |
+| 设计类似 Bitly 的短链接系统            | [n00tc0d3r.blogspot.com](http://n00tc0d3r.blogspot.com/)                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 设计类似 WhatsApp 的聊天应用           | [highscalability.com](http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html)                                                                                                                                                                                                                                                                                                                              |
+| 设计类似 Instagram 的图片分享系统      | [highscalability.com](http://highscalability.com/flickr-architecture)<br/>[highscalability.com](http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html)                                                                                                                                                                                                                                                 |
+| 设计 Facebook 的新闻推荐方法           | [quora.com](http://www.quora.com/What-are-best-practices-for-building-something-like-a-News-Feed)<br/>[quora.com](http://www.quora.com/Activity-Streams/What-are-the-scaling-issues-to-keep-in-mind-while-developing-a-social-network-feed)<br/>[slideshare.net](http://www.slideshare.net/danmckinley/etsy-activity-feeds-architecture)                                                                                                                    |
+| 设计 Facebook 的时间线系统             | [facebook.com](https://www.facebook.com/note.php?note_id=10150468255628920)<br/>[highscalability.com](http://highscalability.com/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html)                                                                                                                                                                                                                                          |
+| 设计 Facebook 的聊天系统               | [erlang-factory.com](http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf)<br/>[facebook.com](https://www.facebook.com/note.php?note_id=14218138919&id=9445547199&index=0)                                                                                                                                                                                                                                              |
+| 设计类似 Facebook 的图表搜索系统       | [facebook.com](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-out-the-infrastructure-for-graph-search/10151347573598920)<br/>[facebook.com](https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920)<br/>[facebook.com](https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920) |
+| 设计类似 CloudFlare 的内容传递网络     | [cmu.edu](http://repository.cmu.edu/cgi/viewcontent.cgi?article=2112&context=compsci)                                                                                                                                                                                                                                                                                                                                                                       |
+| 设计类似 Twitter 的热门话题系统        | [michael-noll.com](http://www.michael-noll.com/blog/2013/01/18/implementing-real-time-trending-topics-in-storm/)<br/>[snikolov .wordpress.com](http://snikolov.wordpress.com/2012/11/14/early-detection-of-twitter-trends/)                                                                                                                                                                                                                                 |
+| 设计一个随机 ID 生成系统               | [blog.twitter.com](https://blog.twitter.com/2010/announcing-snowflake)<br/>[github.com](https://github.com/twitter/snowflake/)                                                                                                                                                                                                                                                                                                                              |
+| 返回一定时间段内次数前 k 高的请求      | [ucsb.edu](https://icmi.cs.ucsb.edu/research/tech_reports/reports/2005-23.pdf)<br/>[wpi.edu](http://davis.wpi.edu/xmdv/docs/EDBT11-diyang.pdf)                                                                                                                                                                                                                                                                                                              |
+| 设计一个数据源于多个数据中心的服务系统 | [highscalability.com](http://highscalability.com/blog/2009/8/24/how-google-serves-data-from-multiple-datacenters.html)                                                                                                                                                                                                                                                                                                                                      |
+| 设计一个多人网络卡牌游戏               | [indieflashblog.com](https://web.archive.org/web/20180929181117/http://www.indieflashblog.com/how-to-create-an-asynchronous-multiplayer-game.html)<br/>[buildnewgames.com](http://buildnewgames.com/real-time-multiplayer/)                                                                                                                                                                                                                                 |
+| 设计一个垃圾回收系统                   | [stuffwithstuff.com](http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/)<br/>[washington.edu](http://courses.cs.washington.edu/courses/csep521/07wi/prj/rick.pdf)                                                                                                                                                                                                                                                                  |
+| 添加更多的系统设计问题                 | [贡献](#贡献)                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ### 真实架构
 
@@ -1651,56 +1639,56 @@ Notes
 * 学习每个组件解决哪些问题，什么情况下使用，什么情况下不适用
 * 复习学过的文章
 
-| 类型              | 系统                                       | 引用                                       |
-| --------------- | ---------------------------------------- | ---------------------------------------- |
-| Data processing | **MapReduce** - Google的分布式数据处理 | [research.google.com](http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/mapreduce-osdi04.pdf) |
-| Data processing | **Spark** - Databricks 的分布式数据处理 | [slideshare.net](http://www.slideshare.net/AGrishchenko/apache-spark-architecture) |
-| Data processing | **Storm** - Twitter 的分布式数据处理 | [slideshare.net](http://www.slideshare.net/previa/storm-16094009) |
-|                 |                                          |                                          |
-| Data store      | **Bigtable** - Google 的列式数据库 | [harvard.edu](http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/chang06bigtable.pdf) |
-| Data store      | **HBase** - Bigtable 的开源实现 | [slideshare.net](http://www.slideshare.net/alexbaranau/intro-to-hbase) |
-| Data store      | **Cassandra** - Facebook 的列式数据库 | [slideshare.net](http://www.slideshare.net/planetcassandra/cassandra-introduction-features-30103666) |
-| Data store      | **DynamoDB** - Amazon 的文档数据库 | [harvard.edu](http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf) |
-| Data store      | **MongoDB** - 文档数据库 | [slideshare.net](http://www.slideshare.net/mdirolf/introduction-to-mongodb) |
-| Data store      | **Spanner** - Google 的全球分布数据库 | [research.google.com](http://research.google.com/archive/spanner-osdi2012.pdf) |
-| Data store      | **Memcached** - 分布式内存缓存系统 | [slideshare.net](http://www.slideshare.net/oemebamo/introduction-to-memcached) |
-| Data store      | **Redis** - 能够持久化及具有值类型的分布式内存缓存系统 | [slideshare.net](http://www.slideshare.net/dvirsky/introduction-to-redis) |
-|                 |                                          |                                          |
-| File system     | **Google File System (GFS)** - 分布式文件系统 | [research.google.com](http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/gfs-sosp2003.pdf) |
-| File system     | **Hadoop File System (HDFS)** - GFS 的开源实现 | [apache.org](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html) |
-|                 |                                          |                                          |
-| Misc            | **Chubby** - Google 的分布式系统的低耦合锁服务 | [research.google.com](http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/chubby-osdi06.pdf) |
-| Misc            | **Dapper** - 分布式系统跟踪基础设施 | [research.google.com](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf) |
-| Misc            | **Kafka** - LinkedIn 的发布订阅消息系统 | [slideshare.net](http://www.slideshare.net/mumrah/kafka-talk-tri-hug) |
-| Misc            | **Zookeeper** - 集中的基础架构和协调服务 | [slideshare.net](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper) |
-|                 | 添加更多                      | [贡献](#贡献)              |
+| 类型            | 系统                                                   | 引用                                                                                                                                           |
+|-----------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data processing | **MapReduce** - Google 的分布式数据处理                | [research.google.com](http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/mapreduce-osdi04.pdf)                     |
+| Data processing | **Spark** - Databricks 的分布式数据处理                | [slideshare.net](http://www.slideshare.net/AGrishchenko/apache-spark-architecture)                                                             |
+| Data processing | **Storm** - Twitter 的分布式数据处理                   | [slideshare.net](http://www.slideshare.net/previa/storm-16094009)                                                                              |
+|                 |                                                        |                                                                                                                                                |
+| Data store      | **Bigtable** - Google 的列式数据库                     | [harvard.edu](http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/chang06bigtable.pdf)                                                    |
+| Data store      | **HBase** - Bigtable 的开源实现                        | [slideshare.net](http://www.slideshare.net/alexbaranau/intro-to-hbase)                                                                         |
+| Data store      | **Cassandra** - Facebook 的列式数据库                  | [slideshare.net](http://www.slideshare.net/planetcassandra/cassandra-introduction-features-30103666)                                           |
+| Data store      | **DynamoDB** - Amazon 的文档数据库                     | [harvard.edu](http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf)                                                   |
+| Data store      | **MongoDB** - 文档数据库                               | [slideshare.net](http://www.slideshare.net/mdirolf/introduction-to-mongodb)                                                                    |
+| Data store      | **Spanner** - Google 的全球分布数据库                  | [research.google.com](http://research.google.com/archive/spanner-osdi2012.pdf)                                                                 |
+| Data store      | **Memcached** - 分布式内存缓存系统                     | [slideshare.net](http://www.slideshare.net/oemebamo/introduction-to-memcached)                                                                 |
+| Data store      | **Redis** - 能够持久化及具有值类型的分布式内存缓存系统 | [slideshare.net](http://www.slideshare.net/dvirsky/introduction-to-redis)                                                                      |
+|                 |                                                        |                                                                                                                                                |
+| File system     | **Google File System (GFS)** - 分布式文件系统          | [research.google.com](http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/gfs-sosp2003.pdf)                         |
+| File system     | **Hadoop File System (HDFS)** - GFS 的开源实现         | [apache.org](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html)                                                                           |
+|                 |                                                        |                                                                                                                                                |
+| Misc            | **Chubby** - Google 的分布式系统的低耦合锁服务         | [research.google.com](http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/chubby-osdi06.pdf) |
+| Misc            | **Dapper** - 分布式系统跟踪基础设施                    | [research.google.com](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf)                                |
+| Misc            | **Kafka** - LinkedIn 的发布订阅消息系统                | [slideshare.net](http://www.slideshare.net/mumrah/kafka-talk-tri-hug)                                                                          |
+| Misc            | **Zookeeper** - 集中的基础架构和协调服务               | [slideshare.net](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper)                                                       |
+|                 | 添加更多                                               | [贡献](#贡献)                                                                                                                                  |
 
 ### 公司的系统架构
 
-| Company        | Reference(s)                             |
-| -------------- | ---------------------------------------- |
-| Amazon         | [Amazon 的架构](http://highscalability.com/amazon-architecture) |
-| Cinchcast      | [每天产生 1500 小时的音频](http://highscalability.com/blog/2012/7/16/cinchcast-architecture-producing-1500-hours-of-audio-every-d.html) |
-| DataSift       | [每秒实时挖掘 120000 条 tweet](http://highscalability.com/blog/2011/11/29/datasift-architecture-realtime-datamining-at-120000-tweets-p.html) |
-| DropBox        | [我们如何缩放 Dropbox](https://www.youtube.com/watch?v=PE4gwstWhmc) |
-| ESPN           | [每秒操作 100000 次](http://highscalability.com/blog/2013/11/4/espns-architecture-at-scale-operating-at-100000-duh-nuh-nuhs.html) |
-| Google         | [Google 的架构](http://highscalability.com/google-architecture) |
-| Instagram      | [1400 万用户，达到兆级别的照片存储](http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html)<br/>[是什么在驱动 Instagram](http://instagram-engineering.tumblr.com/post/13649370142/what-powers-instagram-hundreds-of-instances) |
-| Justin.tv      | [Justin.Tv 的直播广播架构](http://highscalability.com/blog/2010/3/16/justintvs-live-video-broadcasting-architecture.html) |
-| Facebook       | [Facebook 的可扩展 memcached](https://cs.uwaterloo.ca/~brecht/courses/854-Emerging-2014/readings/key-value/fb-memcached-nsdi-2013.pdf)<br/>[TAO: Facebook 社交图的分布式数据存储](https://cs.uwaterloo.ca/~brecht/courses/854-Emerging-2014/readings/data-store/tao-facebook-distributed-datastore-atc-2013.pdf)<br/>[Facebook 的图片存储](https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf) |
-| Flickr         | [Flickr 的架构](http://highscalability.com/flickr-architecture) |
-| Mailbox        | [在 6 周内从 0 到 100 万用户](http://highscalability.com/blog/2013/6/18/scaling-mailbox-from-0-to-one-million-users-in-6-weeks-and-1.html) |
-| Pinterest      | [从零到每月数十亿的浏览量](http://highscalability.com/blog/2013/4/15/scaling-pinterest-from-0-to-10s-of-billions-of-page-views-a.html)<br/>[1800 万访问用户，10 倍增长，12 名员工](http://highscalability.com/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html) |
-| Playfish       | [月用户量 5000 万并在不断增长](http://highscalability.com/blog/2010/9/21/playfishs-social-gaming-architecture-50-million-monthly-user.html) |
-| PlentyOfFish   | [PlentyOfFish 的架构](http://highscalability.com/plentyoffish-architecture) |
-| Salesforce     | [他们每天如何处理 13 亿笔交易](http://highscalability.com/blog/2013/9/23/salesforce-architecture-how-they-handle-13-billion-transacti.html) |
-| Stack Overflow | [Stack Overflow 的架构](http://highscalability.com/blog/2009/8/5/stack-overflow-architecture.html) |
-| TripAdvisor    | [40M 访问者，200M 页面浏览量，30TB 数据](http://highscalability.com/blog/2011/6/27/tripadvisor-architecture-40m-visitors-200m-dynamic-page-view.html) |
-| Tumblr         | [每月 150 亿的浏览量](http://highscalability.com/blog/2012/2/13/tumblr-architecture-15-billion-page-views-a-month-and-harder.html) |
-| Twitter        | [Making Twitter 10000 percent faster](http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster)<br/>[每天使用 MySQL 存储2.5亿条 tweet](http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html)<br/>[150M 活跃用户，300K QPS，22 MB/S 的防火墙](http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html)<br/>[可扩展时间表](https://www.infoq.com/presentations/Twitter-Timeline-Scalability)<br/>[Twitter 的大小数据](https://www.youtube.com/watch?v=5cKTP36HVgI)<br/>[Twitter 的行为：规模超过 1 亿用户](https://www.youtube.com/watch?v=z8LU0Cj6BOU) |
-| Uber           | [Uber 如何扩展自己的实时化市场](http://highscalability.com/blog/2015/9/14/how-uber-scales-their-real-time-market-platform.html) |
-| WhatsApp       | [Facebook 用 190 亿美元购买 WhatsApp 的架构](http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html) |
-| YouTube        | [YouTube 的可扩展性](https://www.youtube.com/watch?v=w5WVu624fY8)<br/>[YouTube 的架构](http://highscalability.com/youtube-architecture) |
+| Company        | Reference(s)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Amazon         | [Amazon 的架构](http://highscalability.com/amazon-architecture)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Cinchcast      | [每天产生 1500 小时的音频](http://highscalability.com/blog/2012/7/16/cinchcast-architecture-producing-1500-hours-of-audio-every-d.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| DataSift       | [每秒实时挖掘 120000 条 tweet](http://highscalability.com/blog/2011/11/29/datasift-architecture-realtime-datamining-at-120000-tweets-p.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| DropBox        | [我们如何缩放 Dropbox](https://www.youtube.com/watch?v=PE4gwstWhmc)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ESPN           | [每秒操作 100000 次](http://highscalability.com/blog/2013/11/4/espns-architecture-at-scale-operating-at-100000-duh-nuh-nuhs.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Google         | [Google 的架构](http://highscalability.com/google-architecture)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Instagram      | [1400 万用户，达到兆级别的照片存储](http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html)<br/>[是什么在驱动 Instagram](http://instagram-engineering.tumblr.com/post/13649370142/what-powers-instagram-hundreds-of-instances)                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Justin.tv      | [Justin.Tv 的直播广播架构](http://highscalability.com/blog/2010/3/16/justintvs-live-video-broadcasting-architecture.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Facebook       | [Facebook 的可扩展 memcached](https://cs.uwaterloo.ca/~brecht/courses/854-Emerging-2014/readings/key-value/fb-memcached-nsdi-2013.pdf)<br/>[TAO: Facebook 社交图的分布式数据存储](https://cs.uwaterloo.ca/~brecht/courses/854-Emerging-2014/readings/data-store/tao-facebook-distributed-datastore-atc-2013.pdf)<br/>[Facebook 的图片存储](https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf)                                                                                                                                                                                                                                                                  |
+| Flickr         | [Flickr 的架构](http://highscalability.com/flickr-architecture)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Mailbox        | [在 6 周内从 0 到 100 万用户](http://highscalability.com/blog/2013/6/18/scaling-mailbox-from-0-to-one-million-users-in-6-weeks-and-1.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Pinterest      | [从零到每月数十亿的浏览量](http://highscalability.com/blog/2013/4/15/scaling-pinterest-from-0-to-10s-of-billions-of-page-views-a.html)<br/>[1800 万访问用户，10 倍增长，12 名员工](http://highscalability.com/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html)                                                                                                                                                                                                                                                                                                                                                                                     |
+| Playfish       | [月用户量 5000 万并在不断增长](http://highscalability.com/blog/2010/9/21/playfishs-social-gaming-architecture-50-million-monthly-user.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| PlentyOfFish   | [PlentyOfFish 的架构](http://highscalability.com/plentyoffish-architecture)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Salesforce     | [他们每天如何处理 13 亿笔交易](http://highscalability.com/blog/2013/9/23/salesforce-architecture-how-they-handle-13-billion-transacti.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Stack Overflow | [Stack Overflow 的架构](http://highscalability.com/blog/2009/8/5/stack-overflow-architecture.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| TripAdvisor    | [40M 访问者，200M 页面浏览量，30TB 数据](http://highscalability.com/blog/2011/6/27/tripadvisor-architecture-40m-visitors-200m-dynamic-page-view.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Tumblr         | [每月 150 亿的浏览量](http://highscalability.com/blog/2012/2/13/tumblr-architecture-15-billion-page-views-a-month-and-harder.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Twitter        | [Making Twitter 10000 percent faster](http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster)<br/>[每天使用 MySQL 存储 2.5 亿条 tweet](http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html)<br/>[150M 活跃用户，300K QPS，22 MB/S 的防火墙](http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html)<br/>[可扩展时间表](https://www.infoq.com/presentations/Twitter-Timeline-Scalability)<br/>[Twitter 的大小数据](https://www.youtube.com/watch?v=5cKTP36HVgI)<br/>[Twitter 的行为：规模超过 1 亿用户](https://www.youtube.com/watch?v=z8LU0Cj6BOU) |
+| Uber           | [Uber 如何扩展自己的实时化市场](http://highscalability.com/blog/2015/9/14/how-uber-scales-their-real-time-market-platform.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| WhatsApp       | [Facebook 用 190 亿美元购买 WhatsApp 的架构](http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| YouTube        | [YouTube 的可扩展性](https://www.youtube.com/watch?v=w5WVu624fY8)<br/>[YouTube 的架构](http://highscalability.com/youtube-architecture)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 ### 公司工程博客
 
